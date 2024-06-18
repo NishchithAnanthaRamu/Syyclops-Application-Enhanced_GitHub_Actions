@@ -6,16 +6,24 @@ services:
     volumes:
       - elements_volume_compose:/app
     command: python3 elements_properties.py
-    
+ 
  
   relationships:
     build: /home/ec2-user/syyclops_docker_compose/relationships/.
     volumes:
       - relationships_volume_compose:/app
     command: python3 relationships.py
+
+  tests:
+    build: /home/ec2-user/syyclops_docker_compose/automated_test/.
+    volumes:
+      - tests_volume_compose:/app
+    command: python3 test_.py
  
 volumes:
   elements_volume_compose:
     driver: local
   relationships_volume_compose:
+    driver: local
+  tests_volume_compose:
     driver: local

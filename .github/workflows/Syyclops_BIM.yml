@@ -1,20 +1,20 @@
 name: Syyclops_BIM
 
 on:
-  #push:
-   #branches:
-    #- main
-  workflow_dispatch:
-    inputs:
-      Branch_Name:
-        description: 'Please specify the branch to be compiled - eg: master'
-        required: true
-        default: main
-        type: string
-      User_Name:
-        description: 'Please specify the triggerer name'
-        required: true
-        type: string
+  push:
+   branches:
+    - main
+  #workflow_dispatch:
+    #inputs:
+     # Branch_Name:
+      #  description: 'Please specify the branch to be compiled - eg: master'
+       # required: true
+       # default: main
+       # type: string
+      #User_Name:
+      #  description: 'Please specify the triggerer name'
+       # required: true
+       # type: string
 
 jobs:
   clone:

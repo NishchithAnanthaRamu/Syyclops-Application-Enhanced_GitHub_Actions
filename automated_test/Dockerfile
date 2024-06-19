@@ -39,4 +39,4 @@ RUN pip install pytest
 ENV NAME IfcOpenShellApp
 
 # Run the application
-CMD ["sh", "-c", "python3"]
+CMD ["python3", "test_.py"]

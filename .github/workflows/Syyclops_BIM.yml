@@ -22,8 +22,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Print user Name & branch
+  
+  Build:
+    runs-on: [ self-hosted ]
+    steps:
+      - name: Build the Docker Compose
         run: |
-          echo ${{ inputs.User_Name }}
-          echo ${{ inputs.Branch_Name }}
+          pwd
+          

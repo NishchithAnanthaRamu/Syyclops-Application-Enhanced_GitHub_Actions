@@ -12,7 +12,7 @@ on:
         default: main
         type: string
       User_Name:
-        description: 'Please specify the triggerer name'
+        description: 'Please specify the user name'
         required: true
         type: string
 
@@ -31,7 +31,7 @@ jobs:
         run: |
           sudo docker-compose build
 
-  Check_the_containers:
+  Check_the_images:
     runs-on: [ self-hosted ]
     needs: Build
     steps:
@@ -39,9 +39,9 @@ jobs:
         run: |
           sudo docker images
 
-  Run_the_images:
+  Run_the_containers:
     runs-on: [ self-hosted ]
-    needs: Check_the_containers
+    needs: Check_the_images
     steps:
       - name: Run the images
         run: |

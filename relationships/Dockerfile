@@ -36,5 +36,5 @@ RUN pip install lark-parser
 ENV NAME IfcOpenShellApp
 
 # Run the application
-CMD ["sh", "-c", "python3"]
+CMD ["python3", "relationships.py"]
 

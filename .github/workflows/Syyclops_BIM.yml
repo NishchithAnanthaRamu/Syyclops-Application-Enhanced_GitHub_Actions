@@ -1,0 +1,29 @@
+name: Syyclops_BIM
+
+on:
+  #push:
+   #branches:
+    #- main
+  workflow_dispatch:
+    inputs:
+      Branch_Name:
+        description: 'Please specify the branch to be compiled - eg: master'
+        required: true
+        default: main
+        type: string
+      User_Name:
+        description: 'Please specify the triggerer name'
+        required: true
+        type: string
+
+jobs:
+  clone:
+    runs-on: [ self-hosted ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print user Name & branch
+        run: |
+          echo ${{ inputs.User_Name }}
+          echo ${{ inputs.Branch_Name }}

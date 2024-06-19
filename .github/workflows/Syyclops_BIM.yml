@@ -17,7 +17,7 @@ on:
         type: string
 
 jobs:
-  clone:
+  Clone:
     runs-on: [ self-hosted ]
     steps:
       - name: Checkout code
@@ -25,8 +25,9 @@ jobs:
   
   Build:
     runs-on: [ self-hosted ]
+    needs: Clone
     steps:
       - name: Build the Docker Compose
         run: |
-          pwd
+          docker-compose build
           

@@ -30,4 +30,12 @@ jobs:
       - name: Build the Docker Compose
         run: |
           sudo docker-compose build
+
+  Check_the_containers:
+    runs-on: [ self-hosted ]
+    needs: Build
+    steps:
+      - name: List the containers
+        run: |
+          sudo docker-compose ps
           

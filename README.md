@@ -13,7 +13,7 @@ This project uses the IfcOpenShell library to process Building Information Model
 1.	Clone the Repository:
     Clone this repository to your local machine.
     ```sh
-    git clone https://github.com/NishchithAnanthaRamu/Syyclops-Application-Enhanced.git
+    git clone https://github.com/NishchithAnanthaRamu/Syyclops-Application-Enhanced_GitHub_Actions.git
     ```
     
 2. Change the directory to Syyclops-Application-Enhanced:
